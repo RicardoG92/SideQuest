@@ -1,15 +1,12 @@
 <div class="container py-5">
   <div class="column">
     <div class="col-12 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
+      < class="bg-white rounded p-3 shadow">
         <h2>Plan Your Next Trip</h2>
         <%= simple_form_for @trip do |f| %>
-          <%= f.input :start_point, placeholder: '11/11/2022' %>
-          <%= f.input :end_point, placeholder: '12/11/2022' %>
-          <div class = "footer" id= "footer-info">
-            <div>
+          <%= f.input :start_point, placeholder: '4578 Avenue Wilson' %>
+          <%= f.input :end_point, placeholder: '4250 Edouard Montpetit' %>
               <%= f.submit %>
-            </div>
           </div>
           <%#= link_to "Cancel", root_path, class: 'btn btn-outline-danger' %>
         <% end %>

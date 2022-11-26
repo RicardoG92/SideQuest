@@ -10,6 +10,8 @@
     <% if @review %>
     <%= @review.body%>
     <%end%>
+      <%= link_to 'Add a SideQuest', new_side_quest_path, class: 'btn btn-outline-primary'%>
+
   </div>
 
     <div style="width: 50%; height: 600px;"
@@ -18,6 +20,3 @@
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" >
     </div>
  </div>
-<div class="footer"id="footer-info">
-  <%= link_to 'Add', new_side_quest_path, class: 'btn btn-outline-primary' %>
-</div>
