@@ -53,9 +53,17 @@
         <%= f.input :end_point %>
         <label class="form-label range optional" for="user_mood">Distance From Main Road</label>
         <input class="form-range numeric range optional" type="range" step="1" name="user[mood]" id="user_mood">
+        <label class="form-label select required" for="user_music">Music <abbr title="required">*</abbr></label>
+        <input name="user[music][]" type="hidden" value="" autocomplete="off">
+        <select class="form-select select required" multiple="multiple" name="user[music][]" id="user_music"><option value="rock">Rock</option>
+          <option value="parks">Parks</option>
+          <option value="attr">Indoor Attractions</option>
+          <option value="food">Bars and Restaurants</option>
+        </select>
       <%end %>
     </div>
   </div>
   <div class="footer">
+    <h2> SEARCH </h2>
   </div>
 </div>
