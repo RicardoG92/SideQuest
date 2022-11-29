@@ -5,9 +5,11 @@
     data-map-api-key-value="<%=  ENV['MAPBOX_API_KEY'] %>" >
   </div>
 </div>
-<div class="sidequest-card">
-  <p><%= @sidequest.name %></p>
-  <p><%= @sidequest.address %></p>
+<div class="sidequest-card cards">
+  <div class = "list-group-item" >
+    <p><%= @sidequest.name %></p>
+    <p><%= @sidequest.address %></p>
+  </div>
   <% @sidequest.reviews.each do |review| %>
     <li class='list-group-item'>
       <small>
@@ -27,12 +29,12 @@
   <div>
     <%= link_to 'See More Reviews',side_quest_reviews_path(@sidequest), class: 'btn-flat' %>
     <%= link_to 'Add a Review',new_side_quest_review_path(@sidequest), class: 'btn-flat' %>
-    <%#= link_to 'Back',trip_path(@trip), class: 'btn-flat' %>
+    <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat' %>
   </div>
 </div>
 
 <div class = "footer-info text-center">
   <div class = "btn">
-    <%= link_to 'Add', new_side_quest_path, class: "btn btn-link" %>
+    <%#= link_to 'Add', new_side_quest_path, class: "btn btn-link" %>
   </div>
 </div>

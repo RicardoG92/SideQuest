@@ -68,4 +68,5 @@ class SideQuestsController < ApplicationController
   def set_review
    @review = Review.find_by(side_quest_id: params[:id])
   end
+
 end
