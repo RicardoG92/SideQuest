@@ -1,7 +1,7 @@
+<div class = "container">
+  <h2><%= sidequest.name %></h2>
+  <p><%= sidequest.address %></p>
+  <p><%= sidequest.description%></p>
 
-
-<h2><%= sidequest.name %></h2>
-<p><%= sidequest.address %></p>
-<p><%= sidequest.description%></p>
-
-<%= link_to "Explore", side_quest_path(sidequest), class: "btn btn-link"  %>
+  <%= link_to "Explore", side_quest_path(sidequest), class: "btn-flat"  %>
+</div>
