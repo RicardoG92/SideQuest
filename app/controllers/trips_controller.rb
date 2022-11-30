@@ -3,6 +3,7 @@ class TripsController < ApplicationController
   before_action :set_sidequest, only: %i[index]
 
   def index
+    # search feature needed
     @trips = current_user.trips
     @trips = Trip.all
   end

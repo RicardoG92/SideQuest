@@ -2,6 +2,7 @@ class SideQuestsController < ApplicationController
 
   before_action :set_sidequest, only: %i[show update destroy]
   before_action :set_review, only: %i[show]
+  before_action :set_category, only: %i[index]
 
 
   def index
@@ -41,9 +42,7 @@ class SideQuestsController < ApplicationController
     end
   end
 
-
-  def edit
-  end
+  def edit; end
 
   def update
     if @sidequest.update(side_quest)
@@ -69,9 +68,12 @@ class SideQuestsController < ApplicationController
   end
 
   def set_review
-   @review = Review.find_by(side_quest_id: params[:id])
+    @review = Review.find_by(side_quest_id: params[:id])
   end
 
+  def set_category
+    @category = Category.find_by(category_id:)
+  end
   # def set_trip
   #   @trip
   # end
