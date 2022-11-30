@@ -25,10 +25,59 @@
       </small>
       <p><%= review.body %></p>
     </li>
-      <%= link_to 'See More Reviews',side_quest_reviews_path(@sidequest), class: 'btn-flat' %>
-      <%= link_to 'Add a Review',new_side_quest_review_path(@sidequest), class: 'btn-flat' %>
-      <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat' %>
+      <%# <%= link_to 'See More Reviews',side_quest_reviews_path(@sidequest), class: 'btn-flat' %>
+      <button class="btn-flat" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">See More Reviews</button>
+      <%#= link_to 'Add a Review',new_side_quest_review_path(@sidequest), class: 'btn-flat', "data-bs-toggle"=> "modal"%>
+      <button class="btn-flat" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Add a Review</button>
+      <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat text-center' %>
   <% end %>
+</div>
+
+<div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">New review</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@sidequest, @review] do |f| %>
+          <%= f.input :rating, collection: 0..5 %>
+          <%= f.input :body%>
+          <%= f.submit class: 'btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Reviews</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <% @sidequest.reviews.each do |review| %>
+          <li class='list-group-item'>
+            <small>
+              <% count = 0 %>
+              <% 5.times do %>
+                <% if review.rating > count %>
+                  <i class="fa-solid fa-star"></i>
+                <% else %>
+                  <i class="fa-regular fa-star"></i>
+                <% end %>
+                <% count += 1 %>
+              <% end %>
+            </small>
+            <p><%= review.body %></p>
+          </li>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class = "footer-info text-center">
@@ -36,3 +85,4 @@
     <%#= link_to 'Add', new_side_quest_path(@trip) %>
   </div>
 </div>
+route to stops
