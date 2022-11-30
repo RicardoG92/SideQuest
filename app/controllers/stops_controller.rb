@@ -7,9 +7,7 @@ class StopsController < ApplicationController
     @stops = Stop.all
   end
 
-  def show
-    @stop = Stop.find(param[:id])
-  end
+  def show; end
 
   def new
     @stop = Stop.new
@@ -18,18 +16,19 @@ class StopsController < ApplicationController
   end
 
   def create
-    @stop = current_user.sidequests
-    #if @stop.save
-
+    @stop = current_user.trips
+    if @stop.save
+      redirect_to side_quests_path, notice: "#{stop.name} has been added to your trip"
+    else
+      redirect_to side_quest_path(@sidequest), notice: "#{stop.name} has not been added to your trip"
+    end
   end
 
-
-  def edit
-
-  end
+  def edit; end
 
   def destroy
     @stop.destroy
+    redirect_to side_quests_path, notice: "#{stop.name} has been removed from your trip"
   end
 
   private

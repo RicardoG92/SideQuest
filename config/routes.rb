@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[index new create]
   end
   resources :trips
-  resources :locations, only: [:new, :create]
+  resources :locations, only: %i[new create]
+  # all my owner sidequests
+  get '/my-sidequest', to: 'sidequests#mysidequests', as: 'mysidequests'
+  # list a dog(owner)
+  get '/my-sidequest/:id', to: 'sidequests#show', as: 'mysidequest'
 end
