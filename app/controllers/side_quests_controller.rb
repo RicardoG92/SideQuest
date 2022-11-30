@@ -22,6 +22,7 @@ class SideQuestsController < ApplicationController
     @markers = [{
         lat: @sidequest.latitude,
         lng: @sidequest.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {sidequest: @sidequest})
       }]
   end
 

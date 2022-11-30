@@ -9,17 +9,6 @@
       <h1>Here is a map with all your SideQuests</h1>
       <%# still working on this !! PLEASE DON NOT TOUCH  %>
       <%#= render 'modal', sidequest: @sidequest %>
-    <div>
-    <% @sidequests.each do |sidequest|%>
-      <a href="/side_quests/<%=sidequest.id%>"><%= sidequest.name%>
-      <%= sidequest.address%>
-      </a>
-      <p><%= sidequest.description%></p>
-    <%end%>
-  </div>
 </div>
 <div class = "footer-info text-center">
-  <div class = "btn">
-    <%= link_to 'Show me this specific SideQuest', side_quests_path(@sidequests.last), class: "btn btn-link"  %>
-  </div>
 </div>
