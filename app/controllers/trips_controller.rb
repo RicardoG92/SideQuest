@@ -8,7 +8,7 @@ class TripsController < ApplicationController
   end
 
   def show
-    @sidequests = SideQuest.first(3)
+    @sidequests = SideQuest.first(6)
     # @sidequests = Sidequest.all
     # @markers = @trip.geocoded.map do
     # {
@@ -20,12 +20,12 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
-    @category = Trip.new
-    @location = Location.new
+    #@category = Trip.new
+    #@location = Location.new
   end
 
   def create
-    @trip = Trip.new(trip_params)
+    @trip = Trip.first
     @sidequests = SideQuest.all
     @trip.user = current_user
     if @trip.save
@@ -43,7 +43,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:start_location_id, :end_location_id)
+    params.require(:trip).permit()
   end
 
   def set_trip
