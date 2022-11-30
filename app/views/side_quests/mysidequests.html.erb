@@ -10,7 +10,7 @@
     <%end%>
   </div>
   <div class = "mx-1">
-    <%= link_to 'Update dog',edit_sidequest_path(sidequest), class: 'btn btn-outline-success' %>
+    <%= link_to 'Update dog',edit_sidequest_path(sidequest), class: 'btn-flat' %>
     <%= link_to 'Remove dog',removedsidequest_path(sidequest.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{sidequest.name} from your Rentals?"}, class: 'btn btn-outline-danger' %>
   </div>
 </div>
