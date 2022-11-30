@@ -1,15 +1,20 @@
 class SideQuestsController < ApplicationController
 
-  before_action :set_sidequest, only: %i[show update destroy]
+  before_action :set_sidequest, only: %i[show update edit destroy]
   before_action :set_review, only: %i[show]
+  before_action :set_category, only: %i[index]
 
 
   def index
+    @sidequests = current_user.sidequests
+    # @mysidequests = current_user
     @sidequests = SideQuest.all
     @markers = @sidequests.geocoded.map do |sidequest|
+
       {
         lat: sidequest.latitude,
-        lng: sidequest.longitude
+        lng: sidequest.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {sidequest: sidequest})
       }
     end
   end
@@ -19,7 +24,8 @@ class SideQuestsController < ApplicationController
     @review = Review.new
     @markers = [{
         lat: @sidequest.latitude,
-        lng: @sidequest.longitude
+        lng: @sidequest.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {sidequest: @sidequest})
       }]
   end
 
@@ -28,19 +34,21 @@ class SideQuestsController < ApplicationController
   end
 
   def create
-    @sidequest = SideQuest.create(set_params)
-    @sidequest.user = current_user
-    @sidequest.category = Category.first
-    if @sidequest.save!
-      redirect_to side_quest_path(@sidequest), notice: "Sidequest was successfully created"
+    @mysidequest = SideQuest.create(set_params)
+    @mysidequest.user = current_user
+    @mysidequest.category = Category.first
+    if @mysidequest.save!
+      redirect_to mysidequests_path, notice: "Sidequest was successfully created"
     else
       redirect_to new_side_quest_path, notice: "Sidequest details were not correct"
     end
   end
 
-
-  def edit
+  def mysidequests
+    @mysidequests = SideQuest.all
   end
+
+  def edit; end
 
   def update
     if @sidequest.update(side_quest)
@@ -66,6 +74,13 @@ class SideQuestsController < ApplicationController
   end
 
   def set_review
-   @review = Review.find_by(side_quest_id: params[:id])
+    @review = Review.find_by(side_quest_id: params[:id])
   end
+
+  def set_category
+    @category = Category.find_by(category_id:)
+  end
+  # def set_trip
+  #   @trip
+  # end
 end
