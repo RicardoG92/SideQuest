@@ -2,7 +2,7 @@ class SideQuestsController < ApplicationController
 
   before_action :set_sidequest, only: %i[show update destroy]
   before_action :set_review, only: %i[show]
-  before_action :save_review, only: %i[show]
+
 
   def index
     @sidequests = SideQuest.all
@@ -19,7 +19,6 @@ class SideQuestsController < ApplicationController
   def show
     @reviews = Review.first(3)
     @review = Review.new
-    @review = Review.create(save_review)
     @markers = [{
         lat: @sidequest.latitude,
         lng: @sidequest.longitude,
@@ -73,7 +72,7 @@ class SideQuestsController < ApplicationController
    @review = Review.find_by(side_quest_id: params[:id])
   end
 
-  def save_review
-    params.require(:review).permit(:body, :rating)
-  end
+  # def set_trip
+  #   @trip
+  # end
 end
