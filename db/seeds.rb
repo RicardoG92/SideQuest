@@ -191,7 +191,7 @@ sidequest2 = SideQuest.create!({
 
 review = Review.create({
   side_quest: sidequest,
-  body: "Amazing experience. I highly recommend to visit Zoo de Granby",
+  body: "Amazing experience. I highly recommend to visit #{sidequest.name}",
   rating: 5,
   user: alex
 })
