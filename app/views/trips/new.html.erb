@@ -5,16 +5,20 @@
   <div class = "avatar-hex">
   </div>
 </div> %>
-<%# <div class="content">
+<div class = "sidequest-photo">
+
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <%# ATTN! cloudinary photos go here loop %>
         <img class="d-block w-100" src="..." alt="First slide">
       </div>
       <div class="carousel-item">
+        <%#ATTN! cloudinary photos go here %>
         <img class="d-block w-100" src="..." alt="Second slide">
       </div>
       <div class="carousel-item">
+        <%#ATTN! cloudinary photos go here %>
         <img class="d-block w-100" src="..." alt="Third slide">
       </div>
     </div>
@@ -27,13 +31,13 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-<div> %>
-<div class = "sidequest-photo">
+
   <%#= cl_image_tag @sidequests.photo.key, height: 200, width: 100, crop: :fit %>
   <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier"%>
 </div>
 <div class="preferences-form">
   <div class = "container">
+
     <%= simple_form_for @trip do |f| %>
       <%= f.input :start_location, :label => "Start Point" %>
       <%= f.input :end_location, :label =>  "End Point"%>
@@ -41,7 +45,9 @@
     <div class = "footer-info text-center">
       <div class = "btn">
         <%= f.submit class: "btn btn-link"%>
+
       </div>
-    </div>
-  <%end %>
+    <%end %>
+  </div>
 </div>
+
