@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   before_action :set_trip, only: %i[show update]
-  # before_action :set_sidequest, only: %i[index]
+  before_action :set_sidequest, only: %i[index]
 
   def index
     @trips = current_user.trips

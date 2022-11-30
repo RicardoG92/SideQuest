@@ -13,26 +13,23 @@
     </div>
   </div> %>
 <%# end %>
-<div class= 'container' data-controller="modal">
-  <% @sidequest.reviews.each do |review| %>
-    <li class='list-group-item'>
-      <small>
-        <% count = 0 %>
-        <% 5.times do %>
-          <% if review.rating > count %>
-            <i class="fa-solid fa-star"></i>
-          <% else %>
-            <i class="fa-regular fa-star"></i>
-          <% end %>
-          <% count += 1 %>
-        <% end %>
-      </small>
-      <p><%= review.body %></p>
-    </li>
-  <% end %>
-</div>
-<div class = "footer-info text-center">
-  <div class = "btn">
-    <%= link_to 'Back', side_quests_path(@sidequest), class: 'btn btn-link' %>
-  </div>
-</div>
+<%# <div class= 'container' data-controller="modal">
+  <div class = "reviews-card">
+    <% @sidequest.reviews.each do |review| %>
+      <%# <li class='list-group-item'>
+        <small> %>
+          <%# count = 0 %>
+          <%# 5.times do %>
+            <%# if review.rating > count %>
+              <%# <i class="fa-solid fa-star"></i> %>
+            <%# else %>
+              <%# <i class="fa-regular fa-star"></i> %>
+            <%# end %>
+            <%# <% count += 1 %>
+          <%# end %>
+        <%# </small> %>
+        <%# <p>= review.body</p> %>
+      <%# </li> %>
+    <%# end %>
+  <%# </div>
+</div> %>
