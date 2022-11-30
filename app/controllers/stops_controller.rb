@@ -4,6 +4,8 @@ class StopsController < ApplicationController
   before_action :set_stop
 
   def index
+    @stops = current_user.stops
+    @mysidequests = current_user.sidequests
     @stops = Stop.all
   end
 
