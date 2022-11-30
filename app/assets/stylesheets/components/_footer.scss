@@ -1,26 +1,30 @@
-.footer {
-  background: $light-yellow! important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  padding: 0px 50px;
-  color: $dark-blue;
-}
+
 
 .footer-info {
 
-  bottom: 0;
   width: 100%;
+  max-width: 600px;
   height: 3.5rem;
   text-decoration: none;
   background-color: $light-yellow;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block-start: 0px;
-  width: 100%;
+  //padding-block-start: 0px;
+  //width: 100%;
 }
