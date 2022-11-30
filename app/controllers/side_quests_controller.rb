@@ -2,12 +2,12 @@ class SideQuestsController < ApplicationController
 
   before_action :set_sidequest, only: %i[show update edit destroy]
   before_action :set_review, only: %i[show]
-  before_action :set_category, only: %i[index]
+  before_action :set_category, only: %i[create new]
 
 
   def index
-    @sidequests = current_user.sidequests
-    # @mysidequests = current_user
+    # @sidequests = current_user.sidequests
+    # @mystops = current_user.stops
     @sidequests = SideQuest.all
     @markers = @sidequests.geocoded.map do |sidequest|
 
@@ -21,7 +21,8 @@ class SideQuestsController < ApplicationController
 
   def show
     @reviews = Review.first(3)
-    @review = Review.new
+    @review = Review.create
+    raise
     @markers = [{
         lat: @sidequest.latitude,
         lng: @sidequest.longitude,
@@ -78,7 +79,7 @@ class SideQuestsController < ApplicationController
   end
 
   def set_category
-    @category = Category.find_by(category_id:)
+    @category = Category.find(params[:id])
   end
   # def set_trip
   #   @trip

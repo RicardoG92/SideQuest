@@ -6,7 +6,7 @@ class CategoryController < ApplicationController
     @categorys = Category.all
   end
 
-  def show;end
+  def show; end
 
   def new
     @category = Category.new
@@ -16,12 +16,9 @@ class CategoryController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user = current_user
-    raise
     if @category.save
-      raise
       redirect_to side_quest_path, notice: "#{category.name} has been saved"
     else
-      raise
       redirect_to new_side_quest_path, notice: "#{category.name} has not been saved, please try again"
     end
   end
