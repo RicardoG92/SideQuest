@@ -25,10 +25,14 @@
       </small>
       <p><%= review.body %></p>
     </li>
-    <button class="btn-flat" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">See More Reviews</button>
-    <button class="btn-flat" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Add a Review</button>
-    <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat text-center' %>
   <% end %>
+  <ul class = "list-group-item">
+    <li>
+      <button class="btn-flat" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">See More Reviews</button>
+      <button class="btn-flat" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Add a Review</button>
+      <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat text-center' %>
+    </li>
+  </ul>
 </div>
 
 <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true">
