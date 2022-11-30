@@ -12,6 +12,3 @@ application.register("map", MapController)
 
 import ModalController from "./modal_controller"
 application.register("modal", ModalController)
-
-import TurboController from "./turbo_controller"
-application.register("turbo", TurboController)

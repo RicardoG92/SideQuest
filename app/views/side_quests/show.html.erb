@@ -25,11 +25,9 @@
       </small>
       <p><%= review.body %></p>
     </li>
-      <%# <%= link_to 'See More Reviews',side_quest_reviews_path(@sidequest), class: 'btn-flat' %>
-      <button class="btn-flat" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">See More Reviews</button>
-      <%#= link_to 'Add a Review',new_side_quest_review_path(@sidequest), class: 'btn-flat', "data-bs-toggle"=> "modal"%>
-      <button class="btn-flat" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Add a Review</button>
-      <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat text-center' %>
+    <button class="btn-flat" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">See More Reviews</button>
+    <button class="btn-flat" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Add a Review</button>
+    <%= link_to 'Back',side_quests_path(@sidequest), class: 'btn-flat text-center' %>
   <% end %>
 </div>
 
