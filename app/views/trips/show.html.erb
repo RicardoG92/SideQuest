@@ -9,7 +9,6 @@
 
 <div class = "trip-card">
     <div class = "trip-title">
-
       <p><i class="fa-solid fa-star">
       </i>
         <div>
@@ -36,16 +35,19 @@
       </div>
     </p>
   </div>
-  <div class = "trip-eta-cards">
-    <div class = "trip-eta-card">
-      <p>eta: x hours</p>
-    </div>
-    <div class = "trip-eta-card2">
-      <p>distance: x- km</p>
-    </div>
+</div>
+<div class = "trip-eta-cards">
+  <div class = "trip-eta-card1">
+    <p>eta: x hours</p>
   </div>
-  <%= link_to 'See More Sidequests', side_quests_path, class: "btn btn-link" %>
-  <%#= link_to 'Navigate', side_quests_path, class: "btn btn-link" %>
+  <div class = "trip-eta-card2">
+    <p>distance: x- km</p>
+  </div>
+</div>
+<div class = "trip-title">
+  <div class = "trip-sidequest-link">
+    <%= link_to 'See More Sidequests', side_quests_path, class: "btn-flat" %>
+  </div>
 </div>
 <div class = "footer-info text-center">
   <div class = "btn">
