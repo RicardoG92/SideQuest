@@ -14,13 +14,11 @@
   </head>
 
   <body>
-  <div id="page-container"style = "background-color:#E5E9F7">
-    <div id="content-wrap">
+    <div class="main-container" style = "background-color:#E5E9F7">
       <%= render "shared/navbar" %>
       <%= render "shared/flashes" %>
       <%= yield %>
       <%#= turbo_frame_tag "remote_modal" %>
     </div>
-  </div>
   </body>
 </html>
