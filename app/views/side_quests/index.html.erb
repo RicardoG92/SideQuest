@@ -1,7 +1,8 @@
+
 <div class = "text-center">
   <h1>Here is a map with all your SideQuests</h1>
 <div>
-<div style="width: 100%; height: 90%;"
+<div style="width: 100%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%=  ENV['MAPBOX_API_KEY'] %>" >
@@ -23,3 +24,5 @@
     <%#= link_to 'Back', trips_path(@trip), class: "btn btn-link"  %>
   <%# </div> %>
 <%# </div> %>
+
+
