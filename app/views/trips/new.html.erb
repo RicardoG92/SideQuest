@@ -31,9 +31,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <%#= cl_image_tag @sidequests.photo.key, height: 200, width: 100, crop: :fit %>
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier"%>
-</div>
+
 <div class="preferences-form">
   <div class = "container">
 
@@ -55,14 +53,10 @@
     <%= simple_form_for @trip do |f| %>
       <%= f.input :start_location, :label => "Start Point" %>
       <%= f.input :end_location, :label =>  "End Point"%>
-  </div>
-    <div class = "footer-info text-center">
-      <div class = "btn">
+        <div class = "btn">
         <%= f.submit class: "btn btn-link"%>
 
 
       </div>
-    <%end %>
-  </div>
 </div>
 

@@ -11,9 +11,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
+
     @review = Review.create(set_params)
     @review.side_quest = @sidequest
     @review.user = current_user
+    @review.save
     if @sidequest.save
       redirect_to side_quest_path(@sidequest, @review)
     else
