@@ -15,9 +15,17 @@
 
 .trip-eta-cards{
   display: flex;
-  // place-content: space-between;
-  position: fixed;
-  top: 595px;
+  place-content: space-between;
   background-color: $dark-blue;
   color: $light-blue;
+  position: relative;
+  top: 530px;
+}
+
+.trip-eta-card2 {
+  position: flex-start;
+}
+.trip-sidequest-link {
+  position: fixed;
+  top: 655px;
 }

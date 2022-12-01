@@ -11,13 +11,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", new_trip_path, class: "nav-link" %>
-          </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://cdn-icons-png.flaticon.com/512/4128/4128176.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "my sidequests", side_quests_path, class: "dropdown-item" %>
+              <%= link_to "Home", new_trip_path, class: "dropdown-item" %>
+              <%= link_to "Create a sidequests", new_side_quest_path, class: "dropdown-item" %>
+              <%= link_to "my sidequests", mysidequests_path, class: "dropdown-item" %>
               <%= link_to "my trips", trips_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>

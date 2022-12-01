@@ -1,5 +1,24 @@
-<div style="width: 100%; height: 850px;"
+<div>
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%=  ENV['MAPBOX_API_KEY'] %>" >
 </div>
+
+<%# <div class = "content">
+  <div class = "container" > %>
+    <%# @sidequests.each do |sidequest|%>
+      <%# div class = "list-group-item"> %>
+        <%#=sidequest.id%><%#= sidequest.name%>
+        <%#= sidequest.address%>
+
+        <%#= sidequest.description%>
+      <%# </div> %>
+    <%#end%>
+  <%# </div>
+</div> %>
+<%# <div class = "footer-info text-center"> %>
+  <%# <div class = "btn"> %>
+    <%#= link_to 'Back', trips_path(@trip), class: "btn btn-link"  %>
+  <%# </div> %>
+<%# </div> %>
+
