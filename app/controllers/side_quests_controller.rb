@@ -22,7 +22,6 @@ class SideQuestsController < ApplicationController
   def show
     @reviews = Review.first(3)
     @review = Review.create
-    raise
     @markers = [{
         lat: @sidequest.latitude,
         lng: @sidequest.longitude,
@@ -71,7 +70,7 @@ class SideQuestsController < ApplicationController
   end
 
   def set_sidequest
-    @sidequest = SideQuest.find(params[:id])
+    #@sidequest = SideQuest.find(params[:id])
   end
 
   def set_review
