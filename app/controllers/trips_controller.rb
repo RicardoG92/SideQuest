@@ -9,16 +9,7 @@ class TripsController < ApplicationController
   end
 
   def show
-    @sidequests = SideQuest.all
-    @markers = @sidequests.geocoded.map do |sidequest|
-
-      {
-        lat: sidequest.latitude,
-        lng: sidequest.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {sidequest: sidequest})
-      }
-    end
-    @sidequests2 = SideQuest.first(6)
+    @sidequests = SideQuest.first(6)
     # @sidequests = Sidequest.all
     # @markers = @trip.geocoded.map do
     # {
@@ -35,7 +26,6 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new
     @trip = Trip.first
     @sidequests = SideQuest.all
     @trip.user = current_user
