@@ -1,12 +1,9 @@
-
-<div class = "text-center">
-  <h1>Here is a map with all Available SideQuests for route</h1>
 <div>
-<div style="width: 100%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%=  ENV['MAPBOX_API_KEY'] %>" >
 </div>
+
 <%# <div class = "content">
   <div class = "container" > %>
     <%# @sidequests.each do |sidequest|%>
@@ -24,3 +21,4 @@
     <%#= link_to 'Back', trips_path(@trip), class: "btn btn-link"  %>
   <%# </div> %>
 <%# </div> %>
+
