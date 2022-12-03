@@ -13,7 +13,6 @@ class StopsController < ApplicationController
   else
     @stop.order = (Stop.last.id) + 1
   end
-  raise
   if @stop.save
     redirect_to side_quests_path, notice: "#{@sidequest.name} was successfully added to your trip"
   else
@@ -21,16 +20,6 @@ class StopsController < ApplicationController
   end
   end
 
-#yellow as a sidequest
-  # create_table "stops", force: :cascade do |t|
-  #   t.bigint "trip_id", null: false
-  #   t.bigint "side_quest_id", null: false
-  #   t.integer "order"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  #   t.index ["side_quest_id"], name: "index_stops_on_side_quest_id"
-  #   t.index ["trip_id"], name: "index_stops_on_trip_id"
-  # end
 
 
   def set_sidequest

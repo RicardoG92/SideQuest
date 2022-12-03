@@ -1,13 +1,4 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+.navbar-brand img {
   width: 40px;
 }
 
@@ -38,9 +29,4 @@
   width: 48px;
   height: 48px;
   background: url(assets/images/sqs/Avataravatar-hex.png)
-}
-
-.navbar-brand {
-  position: fixed;
-  left: 188px;
 }
