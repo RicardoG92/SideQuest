@@ -55,9 +55,9 @@ export default class extends Controller {
     this.#fitMapToMarkers()
 
     const instructions = document.getElementById('instructions');
-    instructions.innerHTML = `<p><strong>Trip duration: ${Math.floor(
+    instructions.innerHTML = `<p>Trip 🚙:${Math.floor(
       data.duration / 60
-    )} min 🚙 </strong></p>`;
+    )}mins.</p>`;
   }
 
   #fitMapToMarkers() {

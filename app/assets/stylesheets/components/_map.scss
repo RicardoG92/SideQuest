@@ -4,15 +4,18 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Josephin-sans", sans-serif;
 }
 
 #instructions {
   position: absolute;
-  margin: 20px;
-  width: 15%;
-  top: 20%;
-  padding: 20px;
-  background-color: #fff;
-  font-family: sans-serif;
+  bottom: 120px;
+  right: 10px;
+  width: 65px;
+  background-color: hsla(225, 60%, 22%, 0.5);
+  font-family: "Josephin-sans";
+  p {
+    color: white;
+    font-weight: lighter;
+  }
 }
