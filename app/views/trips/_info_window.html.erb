@@ -1,22 +1,53 @@
-<% if sidequest.photo.present? %>
-  <div class = 'container'>
-    <%= cl_image_tag sidequest.photo.key, height: 180, width: 200, crop: :fit %>
-    <h2><%= sidequest.name %></h2>
-    <p>Address:<%= sidequest.address %></p>
-    <p><%#= sidequest.description%></p>
+<div class = 'map-popup-window'>
+  <% if sidequest.photo.present? %>
     <div>
-      <%#= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
-      <%#= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
+      <%= cl_image_tag sidequest.photo.key, height: 180, width: 200, crop: :fit %>
+      <div class = 'popup-title'>
+        <h2><%= sidequest.name %></h2>
+      </div>
+      <div class="popup-address">
+        <p><%= sidequest.address %></p>
+      </div>
+      <p><%#= sidequest.description%></p>
+      <div>
+        <%#= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
+        <%#= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
+      </div>
     </div>
-  </div>
-<% else %>
-  <div class = 'container'>
-    <h2><%= sidequest.name %></h2>
-    <p>Address:<%= sidequest.address %></p>
-    <p><%#= sidequest.description%></p>
+  <% else %>
     <div>
-      <%#= link_to "Explore", trip_side_quests_path(@trip, sidequest), class: "btn-flat"  %>
-      <%#= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
+      <div class = 'popup-title'>
+        <h2><%= sidequest.name %></h2>
+      </div>
+      <div class="popup-address">
+        <p><%= sidequest.address %></p>
+      </div>
+      <p><%#= sidequest.description%></p>
+      <div>
+        <%#= link_to "Explore", trip_side_quests_path(@trip, sidequest), class: "btn-flat"  %>
+        <%#= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
+      </div>
     </div>
-  </div>
-<%end%>
+  <%end%>
+</div>
+
+<!-- Button trigger modal -->
+    <%# <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Launch static backdrop modal
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+
+        </div>
+      </div>
+    </div> %>
