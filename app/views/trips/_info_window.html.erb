@@ -8,20 +8,12 @@
       <p class="sidequest-popup-description"><%= sidequest.description%></p>
     </div>
     <div class="sidequest-popup-links">
-      <%= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
-    </div>
-</div>
-
-<% comment do %>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-    <div class="modal fade" id = 'bd-example-modal-lg' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <%= sidequest.description%>
-        </div>
+      <div>
+        <%= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
+      </div>
+      <div>
+        <%= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
       </div>
     </div>
-      <%#= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
   </div>
-<% end %>
+</div>
