@@ -7,7 +7,6 @@ class TripsController < ApplicationController
   def index
     @trips = current_user.trips
     # to be removed once the multiple trips can be displayed
-    @trips = Trip.all
   end
 
   def show

@@ -4,17 +4,17 @@
 }
 
 .footer-container {
-  background-color: #F3DE19;
+  background-color: #f3de19;
   position: fixed;
   bottom: 0%;
-  width: 100%
-};
+  width: 100%;
+}
 
 .navbar-sidequests {
   display: flex;
   height: 72px;
   width: auto;
-  background: #E5E9F7;
+  background: #e5e9f7;
   justify-content: space-between;
   align-items: center;
 }
@@ -22,21 +22,20 @@
 .knight-logo {
   width: 34px;
   height: 35px;
-  top:8px;
-
+  top: 8px;
 }
 
 .avatar-hex {
   width: 48px;
   height: 48px;
-  background: url(assets/images/sqs/Avataravatar-hex.png)
+  background: url(assets/images/sqs/Avataravatar-hex.png);
 }
 
 .navbar-brand {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-right: 0;
 }
 
 .fa-chevron-left {
@@ -48,6 +47,6 @@
   align-items: center;
 }
 
-.back-btn a{
+.back-btn a {
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 <div class = 'container sidequest-image-trip-page'>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <%# cloudinary sidequest photo link %>
@@ -33,7 +33,7 @@
   </div>
 </div>
 <%= simple_form_for @trip do |f| %>
-  <div class = "container">
+  <div class = "container mt-3">
     <div class="field">
       <i class="fa-solid fa-magnifying-glass"></i>
       <%= f.input :start_location, :label => "Origin" %>
@@ -47,9 +47,7 @@
   <div class = 'container'>
     <%= f.input :categories, collection: [ 'Parks', 'Off-Road Activities', 'Wine tours' ] %>
   </div>
-  <div class = "footer-info text-center">
-    <div class = "btn">
+  <div class = "footer-info">
       <%= f.button :submit, 'SEARCH', class: "foottext"%>
-    </div>
   </div>
 <%end %>

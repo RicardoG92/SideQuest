@@ -1,10 +1,6 @@
 .trip-card {
-  position: fixed;
-  top: 359px;
-  display: grid;
-  justify-items: normal;
   width: 100%;
-  height:auto;
+  height: auto;
 }
 
 .trip-title {
@@ -18,7 +14,7 @@
   margin-left: 12px;
 }
 
-.trip-eta-cards{
+.trip-eta-cards {
   display: flex;
   // place-content: space-between;
   position: fixed;
@@ -36,7 +32,7 @@
   }
 }
 
-.trip-destination-address-icon{
+.trip-destination-address-icon {
   position: absolute;
   right: 30px;
   bottom: 270px;
@@ -45,14 +41,14 @@
   }
 }
 
-.trip-info a{
+.trip-info a {
   text-decoration: none;
   font-family: "Josefin Sans";
-  color: #4C6085;
+  color: #4c6085;
 }
 
 .trips-display-card {
-  background-color: #4C6085;
+  background-color: #4c6085;
   font-family: "Josefin Sans";
   color: white;
 }
@@ -66,12 +62,12 @@
   font-size: 14px;
 }
 
-.trip-date{
+.trip-date {
   color: white;
   font-weight: lighter;
 }
 
-.sidequest-number{
+.sidequest-number {
   color: white;
   font-weight: lighter;
 }

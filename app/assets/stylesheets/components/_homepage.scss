@@ -1,4 +1,4 @@
-.homebox{
+.homebox {
   width: 100%;
   height: 100%;
   display: flex;
@@ -9,13 +9,18 @@
   align-items: center;
   padding-bottom: 3rem;
   padding-top: 3rem;
-  background: linear-gradient(0deg, #071651 35%, rgba(63, 100, 210, 0.78) 85%, #8198e8 100%);
+  background: linear-gradient(
+    0deg,
+    #071651 35%,
+    rgba(63, 100, 210, 0.78) 85%,
+    #8198e8 100%
+  );
 }
 
-.tagline{
+.tagline {
   margin: 12px;
-  color: #FFFFFF!important;
-  font-family: 'Josefin Sans';
+  color: #ffffff !important;
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -23,47 +28,46 @@
 }
 
 .headcity {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: normal;
-  color: #FFFFFF;
-  h1{
+  color: #ffffff;
+  h1 {
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
   }
-  p{
+  p {
     font-size: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
-.btn-wideboy{
+.btn-wideboy {
   margin-top: 44px;
   width: 100%;
   height: 56px;
-  background: #E5E9F7;
+  background: #e5e9f7;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.start-btn{
-  color: #4C6085;
+.start-btn {
+  color: #4c6085;
   text-decoration: none;
   height: 33px;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: 24px;
   text-align: center;
   width: 100%;
   border-radius: 4px;
-  background-color: #E5E9F7;
+  background-color: #e5e9f7;
 }
 
 .content-box {
-  position:absolute;
+  position: absolute;
   bottom: 170px;
 }

@@ -1,60 +1,71 @@
 .map-popup-window {
-  max-width:400px;
+  max-width:200px;
   max-height:170px;
 }
 
 .mapboxgl-popup {
+  max-width: 220px;
 
-  .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
-  .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
-    // display:none !important;
+  .mapboxgl-popup-close-button {
+    display: none;
   }
-
 }
 
 .mapboxgl-popup-content {
-  position: relative;
   text-align: center;
   font-family: "Josephin-sans", sans-serif;
-  width: 414px;
+  width: 220px;
   left: 0px;
 }
 
-#instructions {
-  position: absolute;
-  bottom: 120px;
-  right: 10px;
-  width: 65px;
-  background-color: hsla(225, 60%, 22%, 0.5);
-  font-family: "Josephin-sans";
-  p {
-    color: white;
-    font-weight: lighter;
-  }
+.scrollable-section {
+  max-height: 200px;
+  overflow: scroll;
+}
+.sidequest-popup-links {
+  background-color: white;
+  padding-top: 8px;
 }
 
-.popup-title{
-  font-size: 12px!important;
+.sidequest-popup h2 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 6px;
 }
 
-.popup-address {
-  font-size: 10px;
+.sidequesst-popup-address {
+  font-size: 13px;
+  opacity: 0.7;
 }
-
-// .map-popup-modal {
-//   z-index: 3;
-// }
-
-.map-btn-popup{
+.sidequesst-popup-description {
+  font-weight: lighter;
+  font-size: 13px;
+}
+.sidequest-popup-links {
   display: flex;
   a{
     width:100%;
   }
+}
+
+#instructions {
+  position: absolute;
+  z-index: 100;
+  bottom: 100px;
+  right: 5px;
+  width: 80px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.map-trips-edit {
+  width: 100%;
+  height: calc(100vh - 128px);
+}
+.map-trips {
+  width: 100%;
+  height: calc(100vh - 400px);
 }

@@ -1,17 +1,12 @@
-<div class = "map-trips">
-  <div style="width: 100%; height: 608px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    data-map-trip-value="<%= @trip.to_json %>"
-  >
-  </div>
+<div class="map-trips-edit"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  data-map-trip-value="<%= @trip.to_json %>"
+>
 </div>
-
 <div id ="instructions"></div>
 
-<div class = "footer-info text-center">
-  <div class = "btn">
-    <%= link_to 'NAVIGATE', trip_path(@trip), class: "foottext" %>
-  </div>
+<div class = "footer-info">
+  <%= link_to 'CONFIRM TRIP', trip_path(@trip), class: "foottext" %>
 </div>

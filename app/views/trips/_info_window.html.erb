@@ -1,60 +1,27 @@
-<div class = 'map-popup-window'>
-  <% if sidequest.photo.present? %>
-    <div>
-      <%= cl_image_tag sidequest.photo.key, height: 180, width: 200, crop: :fit %>
-      <div class = 'popup-title'>
-        <h2><%= sidequest.name %></h2>
-      </div>
-      <div class="popup-address">
-        <p><%= sidequest.address %></p>
-      </div>
-      <p><%= sidequest.description%></p>
-      <div>
-        <%= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
-        <%= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
-      </div>
+<div class="sidequest-popup">
+  <div class="scrollable-section">
+    <% if sidequest.photo.present? %>
+      <%= cl_image_tag sidequest.photo.key, width: 400, crop: :fit, style: "width: 100%; max-height: 110px; object-fit: cover; object-position: center;" %>
+    <%end%>
+      <h2><%= sidequest.name %></h2>
+      <p class="sidequest-popup-address"><%= sidequest.address %></p>
+      <p class="sidequest-popup-description"><%= sidequest.description%></p>
     </div>
-  <% else %>
-    <div class= 'container'>
-      <div class = 'popup-title'>
-        <h2><%= sidequest.name %></h2>
-      </div>
-      <div class="popup-address">
-        <p><%= sidequest.address %></p>
-      </div>
-      <p><%= sidequest.description%></p>
-      <%# <div class = 'map-modal-page'>
-         <!-- Trigger the modal with a button -->
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> %>
-      <%# <div>
-        <%= link_to "Explore", trip_side_quests_path(@trip, sidequest), class: "btn-flat"  %>
-      <%# </div> %>
-      <div class = 'map-btn-popup'>
-        <%= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
-      </div>
+    <div class="sidequest-popup-links">
+      <%= link_to "Add Stop", new_trip_side_quest_stop_path(@trip, sidequest ), class: "btn-flat"  %>
     </div>
-  <%end%>
 </div>
+
+<% comment do %>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+    <div class="modal fade" id = 'bd-example-modal-lg' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <%= sidequest.description%>
+        </div>
+      </div>
+    </div>
+      <%#= link_to "Explore", trip_side_quest_path(@trip, sidequest), class: "btn-flat"  %>
+  </div>
+<% end %>
