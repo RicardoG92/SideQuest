@@ -1,7 +1,6 @@
 .map-popup-window {
-
-  width:414px;
-  height:300px;
+  max-width:400px;
+  max-height:170px;
 }
 
 .mapboxgl-popup {
@@ -15,8 +14,8 @@
   .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
   .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
   .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
-    display:none !important;
-}
+    // display:none !important;
+  }
 
 }
 
@@ -42,9 +41,20 @@
 }
 
 .popup-title{
-  font-size: 12px;
+  font-size: 12px!important;
 }
 
 .popup-address {
   font-size: 10px;
+}
+
+// .map-popup-modal {
+//   z-index: 3;
+// }
+
+.map-btn-popup{
+  display: flex;
+  a{
+    width:100%;
+  }
 }
